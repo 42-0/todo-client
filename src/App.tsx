@@ -1,30 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Routes from './routes';
 
-function App() {
-  return (
-    <div className="App" style={{ height: '100% !important', width: '100% !important' }}>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit
-          {' '}
-          <code>src/App.tsx</code>
-          {' '}
-          and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+/** @jsxImportSource @emotion/react */
+import { jsx, css, Global } from '@emotion/react';
+import { AppStyle, GlobalStyles } from './app.style';
+
+const App = () => (
+  <div css={AppStyle}>
+    <Global styles={GlobalStyles} />
+    <Routes />
+  </div>
+);
 
 export default App;
