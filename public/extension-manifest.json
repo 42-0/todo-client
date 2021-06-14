@@ -1,0 +1,22 @@
+{
+    "name": "Todos",
+    "version": "0.0.1",
+    "manifest_version": 3,
+    "description": "Todos Web Extension.",
+    "action": {
+        "default_title": "todo",
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "logo.png",
+            "32": "logo.png",
+            "48": "logo.png",
+            "128": "logo.png"
+        }
+    },
+    "icons": {
+        "128": "logo.png"
+    },
+    "permissions": [
+        "storage"
+    ]
+}
