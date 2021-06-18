@@ -1,4 +1,4 @@
-const color = {
+const colors = {
   primary: '#131A34',
   secondary: '#c2c2c2',
   tertiary: '#f1f2f3',
@@ -8,4 +8,4 @@ const color = {
   yellow: '#F8DF3D',
 };
 
-export { color };
+export { colors };
