@@ -10,7 +10,7 @@ const GlobalStyles = css`
   }
 
   * {
-    text-align: center;
+    //text-align: center;
   }
 
   body {

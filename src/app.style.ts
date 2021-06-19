@@ -1,12 +1,12 @@
 import { css } from '@emotion/react';
+import { colors } from './styles/color.style';
 
 const AppStyle = css`
   text-align: center;
-  //height: 100% !important;
-  //width: 100% !important;
-  min-height: 600px;
-  min-width: 450px;
-  background-color: #282c34;
+  height: 600px;
+  width: 450px;
+  overflow: auto;
+  background-color: ${colors.gray};
 `;
 
 export { AppStyle };

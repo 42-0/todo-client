@@ -1,4 +1,4 @@
-interface ITodos {
+interface ITodo {
   id: number;
   sequence: number;
   isChecked: boolean;
@@ -8,4 +8,4 @@ interface ITodos {
   updateAt?: string;
 }
 
-export default ITodos;
+export default ITodo;
