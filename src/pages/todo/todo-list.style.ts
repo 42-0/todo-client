@@ -1,7 +1,7 @@
 import { css } from '@emotion/css';
 import { colors } from '../../styles/color.style';
 
-const todoWrapper = css`
+const todoListWrapper = css`
   display: flex;
   flex: 0 0 81.25%;
 
@@ -29,8 +29,93 @@ const todoList = css`
     background-size: 23.7rem, auto;
   }
 `;
+const todoListMain = css`
+  display: flex;
+  flex: 0 0 100%;
+
+  transition: background 0.3s ease-in-out;
+
+`;
+
+const todoListSlider = css`
+
+`;
+const todoListMainStatus = css`
+  display: flex;
+  align-items: center;
+  flex: 0 0 0.5rem;
+  justify-content: center;
+
+`;
+const todoListMainContent = css`
+  display: flex;
+  flex: 1 1;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 0.9rem 0 0.9rem 0;
+
+  word-break: break-all;
+
+`;
+const todoListMainPrefix = css`
+  font-size: 0.8rem;
+  letter-spacing: -1.05px;
+  color: #c2c2c2;
+`;
+const todoListMainTitle = css`
+  font-size: 1.2rem;
+
+  margin: 0.5rem 0 0;
+
+  letter-spacing: -1.35px;
+
+  color: #333;
+
+`;
+const todoListMainEtc = css`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 10rem;
+
+`;
+
+const todoListMainCheckbox = css`
+  display: none;
+
+  &:checked {
+    &::before {
+      position: absolute;
+      top: -0.2rem;
+      left: 0.4rem;
+
+      display: inline-block;
+
+      width: 3.2rem;
+      height: 2.5rem;
+
+      content: "";
+
+      background-image: url(/images/ic_checked.svg);
+      background-color: aqua;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      background-size: 100% 100%;
+    }
+  }
+`;
 
 export {
-  todoWrapper,
   todoList,
+  todoListWrapper,
+  todoListMain,
+  todoListMainContent,
+  todoListMainEtc,
+  todoListMainPrefix,
+  todoListMainStatus,
+  todoListMainTitle,
+  todoListSlider,
+  todoListMainCheckbox,
 };

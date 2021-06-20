@@ -14,7 +14,14 @@ import {
   todoFilterState,
   todoFilterWrapper,
 } from './todo-nav.style';
-import { todoList, todoWrapper } from './todo-list.style';
+import {
+  todoList, todoListMain,
+  todoListMainCheckbox,
+  todoListMainContent, todoListMainPrefix,
+  todoListMainStatus, todoListMainTitle,
+  todoListWrapper,
+} from './todo-list.style';
+import { getDateTime, getDayOfWeekColor } from '../../utils/date.util';
 
 const Todo = () => {
   const [inputText, setInputText] = useState<string>('');
@@ -50,7 +57,11 @@ const Todo = () => {
 
       <header className={css(todoHeader)}>
         <h1 className={css(todoTitle)}>
-          {dayjs().format('MM.DD ddd')}
+          {dayjs().format('MM.DD')}
+          {' '}
+          <span className={css`color: ${getDayOfWeekColor(dayjs().toISOString())}`}>
+            {dayjs().format('ddd')}
+          </span>
         </h1>
         <form
           className={css(todoSubmit)}
@@ -85,16 +96,34 @@ const Todo = () => {
         </div>
       </nav>
 
-      <div className={css(todoWrapper)}>
+      <div className={css(todoListWrapper)}>
         <div className={css(todoList)}>
-          {todos?.map((value: ITodo, index: number) => (
-            <div key={value.id}>
-              {value.contents}
-            </div>
-          ))}
+          {todos?.filter((value: ITodo) => !value.isChecked)
+            .map((value: ITodo, index: number) => (
+              <div
+                key={value.id}
+                className={css(todoListMain)}
+              >
+                <div className={css(todoListMainStatus)}>
+                  <input
+                    id={`check-${value.id}`}
+                    className={css(todoListMainCheckbox)}
+                    type="checkbox"
+                  />
+                </div>
+
+                <div className={css(todoListMainContent)}>
+                  <div className={css(todoListMainPrefix)}>
+                    {getDateTime(value.createAt)}
+                  </div>
+                  <h2 className={css(todoListMainTitle)}>
+                    {value.contents}
+                  </h2>
+                </div>
+              </div>
+            ))}
         </div>
       </div>
-
     </>
   );
 };

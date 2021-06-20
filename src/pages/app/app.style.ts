@@ -1,5 +1,5 @@
 import { css } from '@emotion/react';
-import { colors } from './styles/color.style';
+import { colors } from '../../styles/color.style';
 
 const AppStyle = css`
   text-align: center;

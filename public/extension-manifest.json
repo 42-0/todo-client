@@ -7,14 +7,14 @@
         "default_title": "todo",
         "default_popup": "popup.html",
         "default_icon": {
-            "16": "logo.png",
-            "32": "logo.png",
-            "48": "logo.png",
-            "128": "logo.png"
+            "16": "images/favicon/android-chrome-192x192.png",
+            "32": "images/favicon/android-chrome-192x192.png",
+            "48": "images/favicon/android-chrome-192x192.png",
+            "128": "images/favicon/android-chrome-192x192.png"
         }
     },
     "icons": {
-        "128": "logo.png"
+        "128": "images/favicon/android-chrome-512x512.png"
     },
     "permissions": [
         "storage"

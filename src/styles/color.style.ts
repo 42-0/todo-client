@@ -23,6 +23,7 @@ const colors = {
   gray9: '#BCC1C7',
   white: '#FFFFFF',
   black: '#000000',
+  red: '#ff0000',
 };
 
 export { colors };
