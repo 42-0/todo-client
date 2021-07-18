@@ -106,7 +106,6 @@ const Todo = () => {
               >
                 <div className={css(todoListMainStatus)}>
                   <input
-                    id={`check-${value.id}`}
                     className={css(todoListMainCheckbox)}
                     type="checkbox"
                   />

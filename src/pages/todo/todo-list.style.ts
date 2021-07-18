@@ -43,17 +43,18 @@ const todoListSlider = css`
 const todoListMainStatus = css`
   display: flex;
   align-items: center;
-  flex: 0 0 0.5rem;
+  flex: 0 0 0 0.5rem;
   justify-content: center;
-
+  margin: 0.5rem;
+  //background-color: aqua;
 `;
 const todoListMainContent = css`
   display: flex;
-  flex: 1 1;
+  //flex: 1 1;
   flex-direction: column;
   justify-content: center;
 
-  padding: 0.9rem 0 0.9rem 0;
+  padding: 0.5rem 0 0.5rem 0;
 
   word-break: break-all;
 
@@ -83,27 +84,19 @@ const todoListMainEtc = css`
 `;
 
 const todoListMainCheckbox = css`
-  display: none;
+  //display: none;
+  width: 1.4rem;
+  height: 1.2rem;
 
   &:checked {
-    &::before {
-      position: absolute;
-      top: -0.2rem;
-      left: 0.4rem;
+      //content: "";
+      //display: inline-block;
 
-      display: inline-block;
-
-      width: 3.2rem;
-      height: 2.5rem;
-
-      content: "";
-
-      background-image: url(/images/ic_checked.svg);
-      background-color: aqua;
-      background-repeat: no-repeat;
-      background-position: 50%;
-      background-size: 100% 100%;
-    }
+      //background-image: url(/images/ic_checked.svg);
+      //background-color: aqua;
+      //background-repeat: no-repeat;
+      //background-position: 50%;
+      //background-size: 100% 100%;
   }
 `;
 
